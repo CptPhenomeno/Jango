@@ -16,8 +16,7 @@ public class Environment {
 		if(!environment.containsKey(key))
 			environment.put(key, value);
 		else
-			throw new IllegalArgumentException("A binding for "+key+
-											   "already exist.");
+			throw new IllegalArgumentException("A binding for "+key+"already exist.");
 	}
 	public Object find(String key) {
 		for(Environment e = this; e != null; e = prec) {
